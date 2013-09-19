@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" > 
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"    
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <head>
+        <title>Sistema Integral de Control Escolar</title>
+         
+    
+    </head>
+    
+    <h:head>
+            <h:outputStylesheet library="css" name="style.css"/>
+            <h:outputStylesheet library="css" name="main.css"/>
+    </h:head>
+
+    <body >
+        <br/><br/>
+        <center>
+        <div align="center"  class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width:650px; font-size: 12px !important;">
+        
+            <img src="resources/images/logo.jpg"/>
+        <form action="j_spring_security_check" method="post">
+            <div style="font-size: 18px !important; font-weight: bold; margin-bottom: 10px; color: #1A5184 ">
+                Sistema Integral de Control Escolar
+                <br />                        
+            </div>
+            
+            <h3>Ocurri&oacute; un error en el sistema</h3>
+            
+            <br/>
+            <span style="font-weight: bold; color: red">
+                <h:outputText value="Credenciales incorrectas" rendered="#{param['error']== '1'}"/>
+                
+            </span>
+        </form>
+                    
+            </div>
+            
+            <br/>
+            
+            
+            </center>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<div id="topnav">
+		<div id="nav">
+			<ul id="appMenuBar">
+				<li><a href="http://www.google.com/" class="logo"></a></li>
+				<h:outputText escape="false" value="#{menuMB.menuHome}" />
+				<h:outputText escape="false" value="#{menuMB.menuJQuery}" />
+				<h:outputText escape="false" value="#{menuMB.menuPruebas}" />
+				<h:outputText escape="false" value="#{menuMB.menuServicios}" />
+				<h:outputText escape="false" rendered="#{loggedUserStatusMB.logged}" value="#{menuMB.menuAdmin}" />
+				<h:outputText escape="false" rendered="#{loggedUserStatusMB.logged}" value="#{menuMB.menuMisDatos}" />
+			</ul>
+		</div>
+	</div>
+
+</ui:composition>

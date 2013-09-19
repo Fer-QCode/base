@@ -1,0 +1,33 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <div id="encabezado">
+    	
+        <div id="barra_herramientas">
+            <div id="herramientas">
+                    <a href="#{request.contextPath}/content/restricted/MenuPrincipal.jsf">Inicio</a> |
+                    <a href="#" onclick="alert('Versión Mobile En Construcción')" >Versión Móvil</a> |
+                    <a href="#" onclick="alert('Directorio En Construcción')" >Directorio</a> |
+                    <a href="#" onclick="alert('Contact En Construcción')" >Contacto</a> |
+                    <a href="#" onclick="alert('Mapa En Construcción')" >Mapa del Sitio</a> |
+                    <a href="#" onclick="alert('Versión en inglés En Construcción')" >English</a>
+            </div>
+        </div>
+        
+        <div id="firma_busqueda">
+            <div id="firma">
+                <div id="firma_p"><a href="http://www.economia.gob.mx/" ></a></div>
+            </div>
+            <div id="buscar">
+                <div id="dominio">
+                    <strong>economia</strong>.gob.mx
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</ui:composition>

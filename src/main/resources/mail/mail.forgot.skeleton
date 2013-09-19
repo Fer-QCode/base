@@ -1,0 +1,11 @@
+<center><h1>Envío de correo personalizado</h1></center>
+<h2>This message has been sent as per your request</h2><br/>
+<h2>A continuación, se muestra una imagen:</h2><br/>
+<pic>resources/images/icon_twitter.png</pic><br/>
+<h2>Y puedo poner muchas mas, no solo una</h2>
+<h3>Verdad?</h3>
+<pic>resources/images/icon_facebook.png</pic><br/>
+Por otro lado, pienso informar de la siguiente URL: #$ <br/>
+Esperamos que le sea &uacute;til.
+<br/><br/><br/>
+<small>Si ya no desea seguir recibiendo correo promocional, haga click en la siguiente liga ##</small>

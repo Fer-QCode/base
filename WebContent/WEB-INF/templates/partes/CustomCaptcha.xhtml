@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+		<h:panelGrid 
+			columns="1" 
+			style="width: 260px;height: 130px;border-style: solid;border-width: thin;background-color: #ffffff;">
+		    <h:panelGrid columns="1">
+		        <p:commandLink
+		            immediate="true"
+		            actionListener="#{captchaMB.changeValue}"
+		            update="captchaImg">
+		            <p:graphicImage 
+		                id="captchaImg"
+		                value="#{request.contextPath}/../Captcha.jpg?id=#{captchaMB.sid}" />
+		        </p:commandLink>
+		        <h:outputText value="Ingrese el texto de la imagen:"/>
+		        <p:inputText 
+		                    required="true" 
+		                    requiredMessage="El valor para el captcha es requerido" 
+		                    label="captcha">
+		            <f:validator validatorId="customCaptchaValidator"/>
+		        </p:inputText>
+		    </h:panelGrid>
+		</h:panelGrid>
+
+</ui:composition>

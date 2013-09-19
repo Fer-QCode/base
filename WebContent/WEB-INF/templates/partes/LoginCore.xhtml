@@ -1,0 +1,54 @@
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:h="http://java.sun.com/jsf/html">
+
+                <p:panel style="width:400px;">
+                    <h:form prependId="false">
+                        <h:panelGrid columns="2">
+                            <h:outputText value="#{translatedMessage['login.username']}:" />
+                            
+	                        <h:inputText 
+	                        	id="usr"
+	                            value="#{loginMB.usr}"
+	                            label="Usuario" 
+	                            maxlength="#{commonDataMB.maxInputTextLength}"/>
+
+                            <h:outputText value="#{translatedMessage['login.password']}:" />
+                            
+	                        <h:inputSecret 
+	                        	id="pwd" 
+	                            value="#{loginMB.pwd}"
+	                            label="Clave" 
+	                            maxlength="#{commonDataMB.maxInputTextLength}"/>
+	                            
+                        </h:panelGrid>
+                        <h:panelGrid columns="1">
+                            <h:panelGroup>
+                                <h:outputText value="#{translatedMessage['login.rememberMe']}" />
+                                <h:selectBooleanCheckbox id="_spring_security_remember_me" />
+                            </h:panelGroup>
+                            <center>
+                            <a href='forgotPassword.jsf'>#{translatedMessage['login.forgotPassword']}</a>
+                            <br/>
+                            <a href='registro/SolicitaRegistro.jsf'>Deseo registrarme</a>
+                            </center>
+                            <br/>
+                        </h:panelGrid>
+
+                        
+						<p:commandButton
+							actionListener="#{loginMB.login}"
+							update="msg"
+							oncomplete="navegate(xhr, status, args, '../restricted/MenuPrincipal.jsf');"
+							value="#{translatedMessage['login.loginButton']}" />
+							
+						<ui:insert name="closeButton" />
+
+                        <br/>
+                        <p:messages id="msg"/>
+                    </h:form>
+                </p:panel>
+
+</ui:composition>

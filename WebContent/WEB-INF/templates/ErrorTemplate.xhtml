@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view contentType="text/html">
+
+    <h:head>
+        <title>CONACyT - INFOTEC - Arquitectura Frontend<ui:insert name="pageName"></ui:insert></title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <meta name="Author" content="Secretaráa de Economía" />
+        <meta name="description" content="Sitio Oficial de la Secretaría de Economía" />
+        <meta name="keywords" content="gobierno, secretario, bruno ferrari, mexico, presidencia, gobierno federal,  portal gubernamental, mexicano, informacion, secretarias, entidades, dependencias,  portal, datos, administracion" />
+        <link rel="Shortcut Icon" href="#{request.contextPath}/content/themes/imagenes/favicon.ico" />
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputScript library="javascript" name="sy.js"/>
+        <ui:insert name="head"></ui:insert>
+    </h:head>
+
+    <h:body>
+	<center>
+		<div style="width: 985px;">
+    <div id="encabezado">
+        <div id="barra_herramientas">
+            <div id="herramientas">
+                    <a href="http://www.economia.gob.mx/" >Inicio</a> |
+                    <a target="_blank" rel="external" onclick="return confirmar();" href="http://www.pot.gob.mx/pot/directorio/begin.do" >Directorio</a> |
+                    <a href="http://www.economia.gob.mx/conoce-la-se/contacto-ciudadano/buzon" >Contacto</a> |
+                    <a href="http://www.economia.gob.mx/component/xmap/html/1?view=html" name="mapadesitio" >Mapa del Sitio</a>
+            </div>
+        </div>
+        <div id="firma_busqueda">
+            <div id="firma">
+                <div id="firma_p"><a href="http://www.economia.gob.mx/" ></a></div>
+            </div>
+            <div id="buscar">
+                <div id="dominio">
+                    <strong>economia</strong>.gob.mx
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu_principal">
+	        <div class="centrado">
+		        <ul>
+		        	<li>.</li>
+		        </ul>
+	        </div>
+        </div>
+
+    </div>
+            <div class="post">
+                <ui:insert name="content"></ui:insert>
+            </div>
+		    
+		        <div id="footer">
+                    <label>Todos los derechos reservados. &#169; GOOSE Inc. 1998-2011 (core v 2.0) (front v 4.0)</label>
+                    <small><h:outputText value="#{translateMB.ip}" /> </small>
+		        </div>
+		    
+		</div>
+    </center>
+    </h:body>
+
+</f:view>
+</html>

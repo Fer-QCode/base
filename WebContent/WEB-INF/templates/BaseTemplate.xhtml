@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"    
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+
+    <h:head>
+        <title>Base para Sistemas</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <meta name="Author" content="carrillo" />
+        <meta name="description" content="SICE" />
+        <meta name="keywords" content="sice" />
+
+        <link rel="Shortcut Icon" href="#{request.contextPath}/content/themes/imagenes/favicon.ico" />
+        
+        
+        <h:outputStylesheet library="css" name="main.css"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        
+    </h:head>
+
+    <h:body>
+	    <ui:include src="partes/SessionTimeOutSection.xhtml" />
+
+            <div style="width: 100%; " >
+                <div style="height: 35px; " class="ui-widget ui-widget-header">
+                    <span style="font-weight: bold; font-size: 13px; color: #FFFFFF; margin-left: 10px">Base para sistemas JEE</span>
+                    
+                    <span style="font-weight: bold; font-size: 13px; color: #FFFFFF; float : right; margin-right: 10px">
+                        #{cuentaMB.username}</span>
+                </div>
+                
+                <div style="margin-top: 10px;">
+                <div style="position: absolute; ">
+                    <h:form>                      
+                       <p:menu> 
+                            
+                           <p:submenu label="Administraci&oacute;n">                            
+                               <p:menuitem value="Cat&aacute;logos" url="/content/restricted/administracion/catalogos.jsf" rendered="#{p:ifGranted('ROLE_REGISTRAR')}" />                              
+                        </p:submenu>
+                         
+                         <p:separator />  
+                         
+                        <p:submenu label="Cuenta">
+                            <p:menuitem value="Cerrar sesi&oacute;n" url="/j_spring_security_logout"  />  
+                            
+                            
+                        </p:submenu>
+                        </p:menu>
+                   <!-- </p:tieredMenu> -->
+                        </h:form>
+                </div>
+                
+                <div style="margin-left: 200px">
+                    <ui:insert name="content"></ui:insert>
+                </div>    
+                </div>           
+            </div>
+            
+    </h:body>
+
+</f:view>
+</html>

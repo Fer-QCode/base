@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" > 
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"    
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <head>
+        <title>Base para sistemas</title>
+    </head>
+    
+    <h:head>
+            <h:outputStylesheet library="css" name="style.css"/>
+            <h:outputStylesheet library="css" name="mainLogin.css"/>
+    </h:head>
+
+    <body >
+        <br/><br/>
+        <center>
+        <div align="center"  class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width:650px; font-size: 12px !important;">
+        
+            <img src="resources/images/logo.png"/>
+        <form action="j_spring_security_check" method="post">
+                        
+            <p:panel header="Acceso al sistema" style="width:400px">
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Usuario"/>
+                    <p:inputText id="j_username"/>
+                    
+                    <h:outputLabel value="Password"/>
+                    <h:inputSecret id="j_password"/>                    
+                </h:panelGrid>
+                
+                <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+                    <span class="ui-button-text">Login</span>
+                </button>
+            </p:panel>
+            <br/>
+            <span style="font-weight: bold; color: red">
+                <h:outputText value="Credenciales incorrectas" rendered="#{param['error']== '1'}"/>
+                
+            </span>
+        </form>
+                    
+            </div>
+            
+            <br/>
+            
+            
+            
+            </center>
+    </body>
+</html>

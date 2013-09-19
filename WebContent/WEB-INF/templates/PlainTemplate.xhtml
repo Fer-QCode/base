@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view contentType="text/html">
+
+    <h:head>
+        <title>SICE para Maestros</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="ie.css" />
+        <h:outputStylesheet library="css" name="main.css"/>
+        
+        <h:outputScript library="javascript" name="sy.js"/>
+
+        <ui:insert name="googleCharts"></ui:insert>
+        <ui:insert name="head"></ui:insert>
+    </h:head>
+
+    <h:body>
+	   
+	    <center>
+            <div style="width: 985px;">
+                <div class="post">
+                    <ui:insert name="content"></ui:insert>
+                </div>
+                
+            </div>
+            <ui:include src="partes/Footer.xhtml" />
+		</center>           
+    </h:body>
+
+</f:view>
+</html>
