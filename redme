@@ -1,0 +1,16 @@
+Deberás realizar los siguientes ajustes
+
+
+1. Cambiar el nombre del jdbc/test por el nombre que desees utilizar en tu aplicación.
+2. Al cambiar los paquetes se deberá buscar en todo el proyecto donde se usa el nombre del paquete 
+como mx.com.mxartesano.base para que en el applicationContext-persistence se cambie para el package. En este archivo aparece 
+la referencia dentro de un bean donde busca las interfaces Mapper.
+Para el caso de applicationContext se deberá cambiar el valor de scan package por el correcto.
+3. En caso de no usar el script que genera las tablas o si se desea utilizar otras tablas se deberá cambiar los querys en 
+el archivo applicationContext-persistence.xml.
+4. Comentar o eliminar la referencia a Catalogos si no se desea utilizar.
+5. Existen 3 templates ubicados en WEB-INF/templates los cuales se deben ajustar para obtener una interfaz personalizada.
+6. En el archivo web.xml existe definido un tema ,deberá cambiarse por el que desee y si no está en el archivo pom.xml 
+el mismo tema, deberá ser agregado al pom para que sea posible su descarga.
+
+Suerte.
