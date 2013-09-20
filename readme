@@ -12,5 +12,5 @@ el archivo applicationContext-persistence.xml.
 5. Existen 3 templates ubicados en WEB-INF/templates los cuales se deben ajustar para obtener una interfaz personalizada.
 6. En el archivo web.xml existe definido un tema ,deberá cambiarse por el que desee y si no está en el archivo pom.xml 
 el mismo tema, deberá ser agregado al pom para que sea posible su descarga.
-
+7. Si lo desea deberá eliminar las clases que llevan de nombre Demo y el XML
 Suerte.

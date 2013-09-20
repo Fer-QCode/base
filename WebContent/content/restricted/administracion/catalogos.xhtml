@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    template="/WEB-INF/templates/BaseTemplate.xhtml">
+
+    <ui:define name="content">
+        <p:panel header="Cat&aacute;logos">
+            <p:dataTable value="#{demoCatalogosMB.estatus}" var="e" 
+                         emptyMessage="No existen registros" paginatorPosition="bottom" 
+                         paginator="true">
+            
+                <f:facet name="header">
+                    <h:outputText value="Cat&aacute;logos"/>
+                </f:facet>
+                
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="ID"/>
+                    </f:facet>
+                    <h:outputText value="#{e.id}"/>
+                </p:column>
+                
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nombre"/>
+                    </f:facet>
+                    <h:outputText value="#{e.nombre}"/>
+                </p:column>
+                
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Estado"/>
+                    </f:facet>
+                    <h:outputText value="#{e.estado}"/>
+                </p:column>
+                
+            </p:dataTable>
+        </p:panel>
+                
+        
+    </ui:define>
+
+</ui:composition>

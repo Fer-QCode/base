@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author ivan
  */
-public class Estatus implements Serializable{
+public class DemoEstatus implements Serializable{
     private Integer id;
     private String nombre;
     private String estado;

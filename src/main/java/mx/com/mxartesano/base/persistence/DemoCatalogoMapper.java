@@ -4,10 +4,14 @@
  */
 package mx.com.mxartesano.base.persistence;
 
+import java.util.List;
+import mx.com.mxartesano.base.model.DemoEstatus;
+
 /**
  *
  * @author ivan
  */
-public interface CatalogoMapper {
+public interface DemoCatalogoMapper {
+    public List<DemoEstatus> obtenerEstatus();
     
 }
