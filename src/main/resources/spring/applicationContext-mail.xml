@@ -4,10 +4,10 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
 <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-	<property name="host" value="mail.carrillo.edu.mx" />
+	<property name="host" value="mail.correo.mx" />
 	<property name="port" value="26" />
-	<property name="username" value="soporte@carrillo.edu.mx" />
-	<property name="password" value="mxlove23." />
+	<property name="username" value="user" />
+	<property name="password" value="12345" />
  
 	<property name="javaMailProperties">
 	   <props>
