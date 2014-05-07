@@ -4,6 +4,7 @@
  */
 package mx.com.mxartesano.base.exposition;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import mx.com.mxartesano.base.model.DemoEstatus;
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Controller;
  * @author ivan
  */
 @Controller
-public class DemoCatalogosMB {
+public class DemoCatalogosMB implements Serializable{
     @Autowired
     private DemoCatalogoService service;
     private List<DemoEstatus> estatus;

@@ -4,6 +4,7 @@
  */
 package mx.com.mxartesano.base.exposition;
 
+import java.io.Serializable;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 @Scope("session")
-public class CuentaMB {
+public class CuentaMB implements Serializable{
     
     public String getUsername(){
         return SecurityContextHolder.getContext().getAuthentication().getName();
