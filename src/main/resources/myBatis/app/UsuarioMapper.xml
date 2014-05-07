@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="mx.com.mxartesano.base.persistence.UsuarioMapper">
+    
+    <resultMap id="usuarioMap" type="mx.com.mxartesano.base.model.Usuario">
+        <result property="idUsuario" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="contrasena"/>
+        <result property="status" column="estado"/>
+    </resultMap>
+    
+    <select id="obtenerUsuarios" resultMap="usuarioMap">
+        SELECT id, username,contrasena,estado
+        FROM usuarios
+    </select>
+    
+    <select id="obtenerUsuariosPorStatus" resultMap="usuarioMap" parameterType="String">
+        SELECT id, username,contrasena,estado
+        FROM usuarios
+        WHERE estado = #{value}
+    </select>
+    
+    <select id="obtenerUsuarioPorId" resultMap="usuarioMap" parameterType="Integer">
+        SELECT id, username,contrasena,estado
+        FROM usuarios
+        WHERE id = #{value}
+    </select>
+    
+</mapper>

@@ -13,5 +13,5 @@ import mx.com.mxartesano.base.model.DemoEstatus;
  */
 public interface DemoCatalogoMapper {
     public List<DemoEstatus> obtenerEstatus();
-    
+    public void registrar(DemoEstatus d);
 }
