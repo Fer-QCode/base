@@ -30,4 +30,23 @@
         WHERE id = #{value}
     </select>
     
+    <insert id="registrarUsuario"  parameterType="mx.com.mxartesano.base.model.Usuario"
+    useGeneratedKeys="true" keyProperty="idUsuario">
+        INSERT INTO usuarios(username,contrasena,estado)
+        VALUES(#{username},#{password},#{status})
+    </insert>
+    
+    <update id="modificarUsuario" parameterType="mx.com.mxartesano.base.model.Usuario">
+        UPDATE usuarios
+        SET contrasena = #{password}, 
+        estado = #{status}
+        WHERE id = #{idUsuario}
+    </update>
+    
+    <update id="eliminarUsuario" parameterType="mx.com.mxartesano.base.model.Usuario">
+        UPDATE usuarios
+        SET estado = 'I' 
+        WHERE id = #{idUsuario}
+    </update>
+    
 </mapper>

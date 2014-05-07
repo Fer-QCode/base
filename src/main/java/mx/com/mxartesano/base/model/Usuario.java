@@ -16,6 +16,12 @@ public class Usuario implements Serializable{
     private String password;
     private String status;
 
+    //private Rol rol;
+    public Usuario() {
+        //rol = new Rol();
+    }
+
+    
     public Integer getIdUsuario() {
         return idUsuario;
     }

@@ -7,9 +7,38 @@
     template="/WEB-INF/templates/BaseTemplate.xhtml">
 
     <ui:define name="content">
+        <p:messages id="msgOperacion" globalOnly="true"/>
+        
         <p:panel header="Usuarios">
+            <h:form id="formUsuario">
+                <h:panelGrid columns="2" >
+                    <h:outputLabel value="Username" for="username"/>
+                    <h:panelGroup>
+                        <p:inputText id="username" value="#{usuarioMB.usuario.username}" required="true" requiredMessage="El username es requerido"/>
+                        <p:message for="username" />
+                    </h:panelGroup>
+                    
+                    
+                    <h:outputLabel value="Password"/>
+                    <p:password value="#{usuarioMB.usuario.password}"/>
+                    
+                    <h:outputLabel value="Porcentaje"/>
+                    <h:panelGroup>
+                        <p:inputText id="porcentaje" value="#{usuarioMB.porcentaje}" validatorMessage="Fuera de rango">
+                            <f:validateLongRange minimum="0" maximum="100"/>
+                        </p:inputText>
+                        <p:message for="porcentaje" />
+                    </h:panelGroup>
+                    
+                    <p:commandButton value="Guardar" 
+                                     actionListener="#{usuarioMB.registrarUsuario()}"
+                                     update=":msgOperacion, formUsuario"/>
+                    
+                    
+                    
+                </h:panelGrid>
            
-            <p:dataTable value="#{usuarioMB.usuarios}" var="u" paginator="true" 
+            <p:dataTable id="resultados" value="#{usuarioMB.usuarios}" var="u" paginator="true" 
                          paginatorPosition="bottom" emptyMessage="No existen usuarios"
                          rows="20">
                 
@@ -43,6 +72,7 @@
                 
             </p:dataTable>
             
+     </h:form>
         </p:panel>
                 
         

@@ -15,4 +15,7 @@ public interface UsuarioMapper {
     public List<Usuario> obtenerUsuarios();
     public List<Usuario> obtenerUsuariosPorStatus(String status);
     public Usuario obtenerUsuarioPorId(Integer id);
+    public void registrarUsuario(Usuario u);
+    public void modificarUsuario(Usuario u);
+    public void eliminarUsuario(Usuario u);
 }

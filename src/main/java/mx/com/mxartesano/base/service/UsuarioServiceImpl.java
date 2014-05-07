@@ -33,5 +33,23 @@ public class UsuarioServiceImpl implements UsuarioService{
     public Usuario obtenerUsuarioPorId(Integer id) {
         return usuarioMapper.obtenerUsuarioPorId(id);
     }
+
+    @Override
+    public void registrarUsuario(Usuario u) {
+        u.setStatus("A");
+        usuarioMapper.registrarUsuario(u);
+        System.out.println("ID Generado: " + u.getIdUsuario());
+        
+    }
+
+    @Override
+    public void modificarUsuario(Usuario u) {
+        usuarioMapper.modificarUsuario(u);
+    }
+
+    @Override
+    public void eliminarUsuario(Usuario u) {
+        usuarioMapper.eliminarUsuario(u);
+    }
     
 }

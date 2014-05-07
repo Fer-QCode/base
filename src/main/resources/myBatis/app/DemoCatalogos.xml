@@ -12,14 +12,9 @@
         <result property="estado" column="ESTADO"/>
     </resultMap>
 
-    <select id="obtenerEstatus" resultMap="estatusMap">
+    <select id="obtenerEstatus" resultMap="estatusMap" >
         SELECT ID, NOMBRE, ESTADO
         FROM ESTATUS
     </select>
-    
-    
-    
-    
-    
-    
+        
 </mapper>
